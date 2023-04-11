@@ -1,38 +1,1276 @@
-.App {
+/*************** ANIMATIONS ***************/
+
+@keyframes slideInRight {
+        from {
+            width: 0;
+        }
+        to {
+            width: 80%;
+        }
+    }
+
+    @keyframes slideOutRight {
+        from {
+            width: 80%;
+        }
+        to {
+          width: 0%;
+        }
+    }
+
+
+
+
+
+/********* SEARCH ********/
+
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Inter', sans-serif;
+}
+
+html{
+background: #000428;
+background: -webkit-linear-gradient(to left, #004e92, #000428); 
+background: linear-gradient(to left, #004e92, #000428);
+}
+
+#root{
+ width: 100%;
+ height: 100vh;
+}
+
+.search{
+  margin-top: 15px;
+  width: 100%;
+  height:fit-content;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+  text-align: center;
+  border: none;
+  background-color: #004e92;
+  color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius:10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 825px) {
+  form input {
+    width: 50%;
+  }
+
+  form button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .search{
+  position: fixed;
+  left: 5%;
+  width: 100%;
+  height: fit-content;
+  margin-top: 15px;
+}
+}
+
+
+/******** SIDEBAR **********/
+
+aside{
+  height: 90vh;
+  width: fit-content;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.navBody{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  margin-top: -50px;
+}
+
+.logo button{
+display: none;
+}
+
+.logo img{
+  width: 120px;
+}
+
+.links li{
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.links li{
+  text-decoration: none;
+  color:whitesmoke;
+  font-size: 1.2rem;
+}
+
+.underline{
+  text-decoration: none;
+}
+
+.links li:hover{
+  text-decoration: underline;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.socials{
+  display: flex;
+  flex-direction: column;
+}
+
+.social samp{
+  font-size: 46px;
+  color:whitesmoke;
+}
+
+.social p{
+  font-size: 16px;
+  color:whitesmoke;
+}
+
+.social samp:hover{
+  font-size: 48px;
+  color:whitesmoke;
+}
+
+.social p:hover{
+  color:white;
+  text-decoration: underline;
+}
+
+.social{
+  display: flex;
+  gap: 0.5rem;
+  align-items:center;
+}
+
+footer p{
+  color: whitesmoke;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.7rem;
+}
+
+.hamburger{
+  display: none;
+}
+
+@media only screen and (max-width: 1030px) {
+aside{
+  left: 1rem;
+}
+  footer p {
+    font-size: 12px;
+  }
+}
+
+
+@media only screen and (max-width: 912px) {
+  aside{
+    position: absolute;
+    left: -10000px; 
+    animation-name: slideOutRight;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .show{
+  height: 98vh;
+  width: fit-content;
+  position: absolute;
+  background: #000428;
+  background: -webkit-linear-gradient(to left, #004e92, #000428); 
+  background: linear-gradient(to left, #004e92, #000428); 
+  z-index: 2;
+  top: 0px;
+  left: 0;
+  padding:30px;
+  animation-name: slideInRight;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+  .hamburger{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  margin-left: 15px;
+}
+
+ .hamburger button{
+  margin: 15px auto;
+  background-color:transparent;
+  color:whitesmoke;
+  font-size: 40px;
+  border:none;
+ }
+
+ .logo {
+ display: flex;
+ justify-content: space-between;
+}
+
+.logo button{
+ display: flex;
+ align-items:center;
+ background-color:transparent;
+ color:whitesmoke;
+ font-size: 40px;
+ border:none;
+}
+
+.logo img{
+  width: 100px;
+}
+
+footer p{
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+}
+
+}
+
+
+/*********** TOP SONGS **********/
+
+.s-songs{
+  position: absolute;
+  width: 1005px;
+  height: 600px;
+  z-index: 3;
+  border: solid black 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  top: 15%;
+  left: 25%;
+}
+
+.s-songs h1{
+  font-size: 2rem;
+  text-align: center;
+  margin: 15px;
+  color:whitesmoke;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.songs-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0px -1rem !important;
+
+  /* grid-template-columns:300px 300px 300px; 
+  grid-template-rows:fit-content;
+  align-items: start;
+  overflow: auto;
+  gap: .5rem 2rem; */
+}
+
+.nasheed {
+  display: flex;
+  margin: 10px;
+  width: 100%; /* Use relative width to make the container responsive */
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border:#050048 solid 2px;
+}
+
+.nasheed .text{
+  display: flex;
+  flex-direction: column;
+  margin: auto 15px;
+  align-items: center;
+}
+
+.nasheed p{
+  font-size: 20px;
+  letter-spacing: 1px;
+  color:#333;
+}
+
+.link-no-underline {
+  text-decoration: none; /* remove underline */
+}
+
+.nasheed span{
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top:5px;
+  color:#333;
+}
+
+.nasheed img{
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius:20px;
+}
+
+.s-songs .songs-container::-webkit-scrollbar {
+  width: 20px; /* Set the width of the scrollbar */
+}
+
+.s-songs .songs-container::-webkit-scrollbar-track {
+  background: #AFD7E5; /* Set the color of the scrollbar track */
+  border-radius: 10px;
+}
+
+.s-songs .songs-container::-webkit-scrollbar-thumb {
+  background:#004e92; /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the radius of the scrollbar thumb */
+  height: 40px !important;
+}
+
+.s-songs .songs-container::-webkit-scrollbar-thumb:hover {
+  background: #004e92; /* Set the color of the scrollbar thumb on hover */
+}
+
+@media (max-width: 1380px) {
+    .songs-container {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  .s-songs {
+    width: 70%;
+    height: 80%;
+  }
+
+}
+
+
+@media (max-width: 912px) {
+  .s-songs {
+    left: 5%;
+    width: 90%;
+    height: 700px;
+    z-index: 0;
+  }
+
+  .nasheed {
+    width: 320px;
+  }
+
+  .nasheed img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+/* For screens with a maximum width of 768px */
+@media screen and (max-width: 770px) {
+  .s-songs {
+    width:82%;
+    height: 82%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .s-songs h1{
+    font-size: 1.7rem;
+  }
+
+  .songs-container {
+    display: grid;
+    grid-template-columns:300px 300px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    overflow: auto;
+    overflow-y: auto;
+    gap: 0px;
+  }
+
+  .nasheed {
+    width: auto;
+    margin: 20px;
+  }
+
+  .nasheed img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nasheed p{
+  font-size: 15px;
+  margin: auto 10px;
+  letter-spacing: 1px;
+}
+  .nasheed span{
+    font-size: 14px;
+  }
+
+  .s-songs .songs-container::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+     .songs-container {
+    display: grid;
+    grid-template-columns:360px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+   .songs-container {
+    display: grid;
+    grid-template-columns:270px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    justify-content: center;
+    overflow-x:hidden;
+  }
+  
+  .nasheed {
+    width: auto;
+    margin: 10px;
+  }
+  .s-songs {
+    width:90%;
+  }
+
+}
+
+/************** SINGLE-NASHEED **************/
+
+.single-nasheed{
+  width: fit-content;
+  height: fit-content; 
+  margin: auto;
+  padding: 20px; 
+  position: absolute  ; 
+  top: 0; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  border: solid black 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.single-nasheed img{
+  margin: 20px;
+  margin-top: 0px;
+  width: 350px;
+  border-radius:20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.p{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color:rgb(17, 17, 17);
+}
+
+.single-nasheed .p-2{
+  font-size: 18px;
+}
+
+audio {
+  width: 350px;
+}
+
+.controls{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.single-nasheed button{
+  background-color: transparent;
+  border:none;
+  font-size: 40px;
+  margin-top: 5px;
+  color:whitesmoke;
+  cursor: pointer;
+}
+
+
+.close-song-btn{
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.close-song-btn button{
+  cursor: pointer;
+  background-color:transparent;
+  color:whitesmoke;
+  font-size: 40px;
+  border:none;
+}
+
+@media screen and (max-width: 1030px) {
+  .single-nasheed{
+    margin-top: 90px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 1000px) {
+  .single-nasheed{
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 505px) {
+
+.single-nasheed img{
+    margin: 10px;
+    width: 230px;
+  }
+
+  .p{
+    font-size: 17px;
+}
+
+.single-nasheed .p-2{
+  font-size: 15px;
+}
+
+  .single-nasheed .p-2{
+  font-size: 18px;
+}
+
+audio {
+  width: 260px;
+  padding: 5px;
+}
+
+.single-nasheed button{
+    font-size: 30px;
+}
+
+.single-nasheed{
+  padding: 10px;
+}
+
+}
+
+
+@media screen and (max-width: 380px) {
+  audio {
+  width: 220px;
+  padding: 5px;
+}
+}
+
+
+
+
+
+
+/************** LOADING ********/
+
+.loading{
+  font-size: 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 505px) {
+  .loading{
+    font-size: 25px;
+  }
+}
+
+
+/************ CATEGORIES **************/
+
+.s-categories{
+  position: absolute;
+  width: 1005px;
+  height: 600px;
+  z-index: 3;
+  border: solid black 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  top: 15%;
+  left: 25%;
+}
+
+.categories-container{
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns:300px 300px 300px; /* Use auto-fit and minmax to create flexible grid columns */
+  grid-template-rows:fit-content; /* Use auto-fit and minmax to create flexible grid rows */
+  align-items: start;
+  overflow: auto;
+  gap: .5rem 2rem;
+}
+
+.s-categories h1{
+  font-size: 2rem;
+  text-align: center;
+  margin: 15px;
+  color:whitesmoke;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 10px;
+  padding: 20px;
+  width: fit-content; /* Use relative width to make the container responsive */
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border:#050048 solid 2px;
+}
+
+
+
+.category p{
+  font-size: 20px;
+  letter-spacing: 1px;
+  color:#333;
+  margin-bottom: 5px;
+}
+
+.category .text{
+  display: flex;
+  flex-direction: column;
+  margin: auto 15px;
+  align-items: center;
+}
+
+.link-no-underline {
+  text-decoration: none; /* remove underline */
+}
+
+.category img{
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius:20px;
+}
+
+.s-categories .categories-container::-webkit-scrollbar {
+  width: 20px; /* Set the width of the scrollbar */
+}
+
+.s-categories .categories-container::-webkit-scrollbar-track {
+  background: #AFD7E5; /* Set the color of the scrollbar track */
+  border-radius: 10px;
+}
+
+.s-categories .categories-container::-webkit-scrollbar-thumb {
+  background:#004e92; /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the radius of the scrollbar thumb */
+  height: 40px !important;
+}
+
+.s-categories .categories-container::-webkit-scrollbar-thumb:hover {
+  background: #004e92; /* Set the color of the scrollbar thumb on hover */
+}
+
+.home-icon button{
+  position:absolute;
+  top: 3.5%;
+  left: 80%;
+  background-color:transparent;
+  border:none;
+  color:whitesmoke;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 770px) {
+  .home-icon button{
+    top: 3%;
+    left: 80%;
+    font-size: 30px;
+  }
+}
+
+
+@media (max-width: 1380px) {
+    .categories-container {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  .s-categories {
+    width: 70%;
+    height: 80%;
+  }
+
+}
+
+
+@media (max-width: 912px) {
+  .s-categories {
+    left: 5%;
+    width: 90%;
+    height: 700px;
+    z-index: 0;
+  }
+
+  .category {
+    width: 300px;
+  }
+}
+
+
+/* For screens with a maximum width of 768px */
+@media screen and (max-width: 770px) {
+  .s-categories {
+    width:82%;
+    height: 82%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .s-categories h1{
+    font-size: 1.7rem;
+  }
+
+  .categories-container {
+    display: grid;
+    grid-template-columns:300px 300px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    overflow: auto;
+    overflow-y: auto;
+    gap: 0px;
+  }
+
+  .category {
+    width: auto;
+    margin: 20px;
+  }
+
+  .s-categories .categories-container::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+    .categories-container {
+    display: grid;
+    grid-template-columns:360px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+   .categories-container {
+    display: grid;
+    grid-template-columns:270px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    justify-content: center;
+    overflow-x:hidden;
+  }
+  
+  .category {
+    width: auto;
+    margin: 10px;
+  }
+  .s-categories {
+    width:90%;
+  }
+
+}
+
+.text span{
+  font-size: 16px;
+  letter-spacing: 1px;
+  color:#333;
+}
+
+/************ TOP ARTISTS **************/
+
+.s-top-artists{
+  position: absolute;
+  width: 1005px;
+  height: 600px;
+  z-index: 3;
+  border: solid black 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  top: 15%;
+  left: 25%;
+}
+
+.top-artists-container{
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns:300px 300px 300px; /* Use auto-fit and minmax to create flexible grid columns */
+  grid-template-rows:fit-content; /* Use auto-fit and minmax to create flexible grid rows */
+  align-items: start;
+  overflow: auto;
+  gap: .5rem 2rem;
+}
+
+.s-top-artists h1{
+  font-size: 2rem;
+  text-align: center;
+  margin: 15px;
+  color:whitesmoke;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.atist {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 10px;
+  padding: 20px;
+  width: fit-content; /* Use relative width to make the container responsive */
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border:#050048 solid 2px;
+}
+
+
+
+.atist p{
+  font-size: 20px;
+  letter-spacing: 1px;
+  color:#333;
+  margin-bottom: 5px;
+}
+
+.atist .text{
+  display: flex;
+  flex-direction: column;
+  margin: auto 15px;
+  align-items: center;
+}
+
+.link-no-underline {
+  text-decoration: none; /* remove underline */
+}
+
+.atist img{
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius:50%;
+}
+.s-top-artists .top-artists-container::-webkit-scrollbar {
+  width: 20px; /* Set the width of the scrollbar */
+}
+
+.s-top-artists .top-artists-container::-webkit-scrollbar-track {
+  background: #AFD7E5; /* Set the color of the scrollbar track */
+  border-radius: 10px;
+}
+
+.s-top-artists .top-artists-container::-webkit-scrollbar-thumb {
+  background:#004e92; /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the radius of the scrollbar thumb */
+  height: 40px !important;
+}
+
+.s-top-artists .top-artists-container::-webkit-scrollbar-thumb:hover {
+  background: #004e92; /* Set the color of the scrollbar thumb on hover */
+}
+
+.home-icon button{
+  position:absolute;
+  top: 3.5%;
+  left: 80%;
+  background-color:transparent;
+  border:none;
+  color:whitesmoke;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 770px) {
+  .home-icon button{
+    top: 3%;
+    left: 80%;
+    font-size: 30px;
+  }
+}
+
+
+@media (max-width: 1380px) {
+    .top-artists-container {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  .s-top-artists {
+    width: 70%;
+    height: 80%;
+  }
+
+}
+
+
+@media (max-width: 912px) {
+  .s-top-artists {
+    left: 5%;
+    width: 90%;
+    height: 700px;
+    z-index: 0;
+  }
+
+  .atist {
+    width: 300px;
+  }
+}
+
+
+/* For screens with a maximum width of 768px */
+@media screen and (max-width: 770px) {
+  .s-top-artists {
+    width:82%;
+    height: 82%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .s-top-artists h1{
+    font-size: 1.7rem;
+  }
+
+  .top-artists-container {
+    display: grid;
+    grid-template-columns:300px 300px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    overflow: auto;
+    overflow-y: auto;
+    gap: 0px;
+  }
+
+  .atist {
+    width: auto;
+    margin: 20px;
+  }
+
+  .s-top-artists .top-artists-container::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+    .top-artists-container {
+    display: grid;
+    grid-template-columns:360px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+   .top-artists-container {
+    display: grid;
+    grid-template-columns:270px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
+    justify-content: center;
+    overflow-x:hidden;
+  }
+  
+  .atist {
+    width: auto;
+    margin: 10px;
+  }
+  .s-top-artists {
+    width:90%;
+  }
+
+}
+
+
+
+
+/***************** ARTIST *****************/
+
+.s-artist{
+  position: absolute;
+  width: 1005px;
+  height: 600px;
+  z-index: 0;
+  border: solid black 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  top: 15%;
+  left: 25%;
+  display: flex;
+}
+
+.artist-info{
+  text-align: center;
+  width: 40%;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.artist-info img{
+  width: 300px;
+  height: 300px;
+  border-radius:50%;
+}
+
+.artist-info h1{
+  font-size: 35px;
+  margin: 10px;
+  color:#333;
+}
+
+.artist-info p{
+  font-size: 18px;
+  color:#333;
+  margin-bottom: 5px;
+}
+
+.artist-songs{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  justify-items: center;
+  overflow: auto;
+  grid-row-gap: 10px;
+}
+
+.s-artist .nasheed{
+  margin: 5px;
+  width: 380px;
+  height: fit-content; 
+  padding: 20px; 
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+.artist-songs::-webkit-scrollbar {
+  width: 20px; /* Set the width of the scrollbar */
+}
+
+.artist-songs::-webkit-scrollbar-track {
+  background: #AFD7E5; /* Set the color of the scrollbar track */
+  border-radius: 10px;
+}
+
+.artist-songs::-webkit-scrollbar-thumb {
+  background:#004e92; /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the radius of the scrollbar thumb */
+  height: 40px !important;
+}
+
+.artist-songs::-webkit-scrollbar-thumb:hover {
+  background: #004e92; /* Set the color of the scrollbar thumb on hover */
+}
+
+
+@media (max-width: 1380px) {
+  .s-artist{
+    width: 70%;
+    height: 80%;
+  }
+
+.s-artist .nasheed{
+  width: 320px;
+}
+
+.artist-info img{
+  width: 250px;
+  height: 250px;
+}
+
+.artist-info h1{
+  font-size: 32px;
+}
+
+.artist-info p{
+  font-size: 18px;
+}
+
+}
+
+
+@media (max-width: 950px) {
+.s-artist{
+    width: 73%;
+    height: 80%;
+  }
+
+.s-artist .nasheed{
+  width: 300px;
+}
+
+.artist-info img{
+  width: 230px;
+  height: 230px;
+}
+
+.artist-info h1{
+  font-size: 30px;
+}
+
+.artist-info p{
+  font-size: 16px;
+}
+
+}
+
+@media (max-width: 910px) {
+  .s-artist{
+  position: fixed;
+  top: 55%; /* Set top position to 50% */
+  left: 50%; /* Set left position to 50% */
+  transform: translate(-50%, -50%); /* Use transform to center horizontally and vertically */
+  display: flex;
+  }
+}
+
+@media (max-width: 880px) {
+.s-artist{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  }
+
+  .artist-info{
+  margin: 5px 0 0 0;
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  }
+
+  .artist-info img{
+  width: 180px;
+  height: 180px;
 }
 
-.App-link {
-  color: #61dafb;
+.artist-info h1{
+  font-size: 27px;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.artist-info p{
+  font-size: 16px;
+}
+}
+
+
+@media (max-width: 510px) {
+.s-artist{
+  width: 95%;
+}
+
+.s-artist .nasheed{
+  width: 260px;
+}
+
+.artist-info img{
+  width: 180px;
+  height: 180px;
+}
+
+.artist-info h1{
+  font-size: 27px;
+}
+
+.artist-info p{
+  font-size: 16px;
+}
 }
