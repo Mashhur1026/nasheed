@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { logo, icons } from "../data"
 import { useGlobalContext } from "../contex";
 import { AiOutlineClose } from 'react-icons/ai'

@@ -22,8 +22,8 @@ function Artist() {
       const { artistImg, artist } = item;
       img = artistImg;
       artistName = artist;
+      return { img, artistName };
     });
-    return { img, artistName };
   };
 
   const { img, artistName } = selector();
