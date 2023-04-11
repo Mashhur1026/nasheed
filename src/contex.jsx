@@ -1,5 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useContext } from "react";
 
 const AppContext = React.createContext();
 

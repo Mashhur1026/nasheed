@@ -11,9 +11,8 @@ import nasheeds from "../data";
 function Nasheed() {
   const [queryParametrs] = useSearchParams()
   const { openSidebar, path } = useGlobalContext();
-  const { id, category } = useParams();
+  const { id} = useParams();
   const [selectedNasheed, setSelectedNasheed] = useState(null);
-  const [selectedId,setSelectedId] = useState(0)
   const pathname = window.location.pathname;
   const checkCategory = queryParametrs.get("category");
   const data = checkCategory ? nasheeds.filter(nasheed => nasheed.category === checkCategory) : nasheeds
@@ -25,7 +24,7 @@ function Nasheed() {
   useEffect(() => {
     const song = data.find((item) => item.id === parseInt(id));
     setSelectedNasheed(song);
-  }, [id]);
+  }, [id,data]);
 
   const nextSong = () => {
     let number = selectedNasheed.id + 1;

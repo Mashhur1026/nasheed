@@ -471,10 +471,12 @@ footer p{
 @media screen and (max-width: 440px) {
    .songs-container {
     display: grid;
-    grid-template-columns:270px; /* Use auto-fit and minmax to create flexible grid columns */
+    grid-template-columns:250px; /* Use auto-fit and minmax to create flexible grid columns */
     grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
     justify-content: center;
     overflow-x:hidden;
+    justify-content: center;
+    margin: 0px -0.5rem !important;
   }
   
   .nasheed {
