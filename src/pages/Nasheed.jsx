@@ -1,70 +1,84 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link,useSearchParams } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { BiSkipNext } from "react-icons/bi";
-import { BiSkipPrevious } from "react-icons/bi";
-import { useGlobalContext } from "../contex";
-import { AiOutlineClose } from "react-icons/ai";
+import React, { useState, useEffect } from 'react'
+import { useParams, Link, useSearchParams } from 'react-router-dom'
+import { RxHamburgerMenu } from 'react-icons/rx'
+import { BiSkipNext } from 'react-icons/bi'
+import { BiSkipPrevious } from 'react-icons/bi'
+import { useGlobalContext } from '../contex'
+import { AiOutlineClose } from 'react-icons/ai'
 
-import nasheeds from "../data";
+import nasheeds from '../data'
 
 function Nasheed() {
   const [queryParametrs] = useSearchParams()
-  const { openSidebar, path } = useGlobalContext();
-  const { id} = useParams();
-  const [selectedNasheed, setSelectedNasheed] = useState(null);
-  const pathname = window.location.pathname;
-  const checkCategory = queryParametrs.get("category");
-  const data = checkCategory ? nasheeds.filter(nasheed => nasheed.category === checkCategory) : nasheeds
-  console.log(checkCategory, data, selectedNasheed);
+  const { openSidebar, path } = useGlobalContext()
+  const { id } = useParams()
+  const [selectedNasheed, setSelectedNasheed] = useState(null)
+  const [selectedInd, setSelectedInd] = useState(null)
+  const pathname = window.location.pathname
+  const checkCategory = queryParametrs.get('category')
+  const data = checkCategory
+    ? nasheeds.filter((nasheed) => nasheed.category === checkCategory)
+    : nasheeds
 
   // Determine the target link based on the current pathname
-  const targetLink = pathname === "/nasheed" ? "/" : path;
+  const targetLink = pathname === '/nasheed' ? '/' : path
 
   useEffect(() => {
-    const song = data.find((item) => item.id === parseInt(id));
-    setSelectedNasheed(song);
-  }, [id,data]);
+    if (selectedNasheed === null) {
+      const song = data.find((item) => item.id === parseInt(id))
+      setSelectedNasheed(song)
+    }
+  }, [id, data, selectedNasheed])
+
+  useEffect(() => {
+    if (selectedNasheed && selectedInd === null) {
+      data.forEach((nasheed, i) => {
+        if (selectedNasheed.id === nasheed.id) {
+          setSelectedInd(i)
+        }
+      })
+    }
+  }, [selectedNasheed, selectedInd, data])
 
   const nextSong = () => {
-    let number = selectedNasheed.id + 1;
-    if (number > data.length) {
-      number = 1; 
+    let number = selectedInd + 1
+    if (number > data.length - 1) {
+      number = 0
     }
-    setSelectedNasheed(data.find((item) => item.id === number));
-  };
+    setSelectedNasheed(data.find((item, i) => i === number))
+    setSelectedInd(number)
+  }
 
   const prevSong = () => {
-    let number = selectedNasheed.id - 1;
-    if (number < 1) {
-      number = data.length;
+    let number = selectedInd - 1
+    if (number < 0) {
+      number = data.length - 1
     }
-    setSelectedNasheed(data.find((item) => item.id === number));
-  };
+    setSelectedNasheed(data.find((item, i) => i === number))
+    setSelectedInd(number)
+  }
 
   if (!selectedNasheed) {
     return (
-      <div className="loading">
+      <div className='loading'>
         <h1>Loading...</h1>
       </div>
-    );
+    )
   }
 
-
-
-  const { img, artist, song, name } = selectedNasheed;
+  const { img, artist, song, name } = selectedNasheed
 
   return (
     <>
-      <div className="hamburger">
+      <div className='hamburger'>
         <button onClick={openSidebar}>
           <RxHamburgerMenu />
         </button>
       </div>
 
-      <div className="single-nasheed" key={id}>
+      <div className='single-nasheed' key={id}>
         <Link to={targetLink}>
-          <div className="close-song-btn">
+          <div className='close-song-btn'>
             <button>
               <AiOutlineClose />
             </button>
@@ -72,24 +86,24 @@ function Nasheed() {
         </Link>
 
         <img src={img} alt={name} />
-        <div className="p">
+        <div className='p'>
           <p>{name}</p>
-          <p className="p-2">{artist}</p>
+          <p className='p-2'>{artist}</p>
         </div>
-        <div className="controls">
-          <button id="previousButton" onClick={prevSong}>
+        <div className='controls'>
+          <button id='previousButton' onClick={prevSong}>
             <BiSkipPrevious />
           </button>
-          <audio className="audio" src={song} controls autoPlay>
+          <audio className='audio' src={song} controls autoPlay>
             Your browser does not support the audio element.
           </audio>
-          <button id="nextButton" onClick={nextSong}>
+          <button id='nextButton' onClick={nextSong}>
             <BiSkipNext />
           </button>
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Nasheed  ;
+export default Nasheed
