@@ -11,16 +11,19 @@ function SearchPage() {
   const { text } = useParams()
   const [data, setData] = useState(nasheeds)
   
-  useEffect(() => {
-    const filtredData = nasheeds.filter((nasheed) => {
-      if (
-        nasheed.name.toUpperCase().includes(text.toUpperCase()) ||
-        nasheed.artist.toUpperCase().includes(text.toUpperCase())
-      )
-        return nasheed;
-    })
-    setData(filtredData)
-  },[text])
+ useEffect(() => {
+   const filteredData = nasheeds.filter((nasheed) => {
+     if (
+       nasheed.name.toUpperCase().includes(text.toUpperCase()) ||
+       nasheed.artist.toUpperCase().includes(text.toUpperCase())
+     ) {
+       return nasheed;
+     }
+     return null;
+   });
+   setData(filteredData);
+ }, [text]);
+
 
   return (
     <>
