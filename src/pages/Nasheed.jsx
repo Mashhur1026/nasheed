@@ -16,9 +16,10 @@ function Nasheed() {
   const [selectedInd, setSelectedInd] = useState(null)
   const pathname = window.location.pathname
   const checkCategory = queryParametrs.get('category')
+  const checkArtist = queryParametrs.get('artist')
   const data = checkCategory
     ? nasheeds.filter((nasheed) => nasheed.category === checkCategory)
-    : nasheeds
+    : (checkArtist ? nasheeds.filter((nasheed) => nasheed.artist === checkArtist) : nasheeds)
 
   // Determine the target link based on the current pathname
   const targetLink = pathname === '/nasheed' ? '/' : path

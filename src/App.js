@@ -10,6 +10,7 @@ import Error from "./pages/Error";
 import Nasheed from "./pages/Nasheed";
 import Category from "./pages/Category";
 import Artist from "./pages/Artist";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/nasheed/:id" element={<Nasheed />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="*" element={<Error />} />
+        <Route path="/search/:text" element={<SearchPage />} />
       </Routes>
     </BrowserRouter>
   );

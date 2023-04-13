@@ -46,23 +46,23 @@ function Artist() {
             const { artistImg, name, id, artist } = nasheed
             return (
               <Link
-                to={`/nasheed/${nasheed.id}`}
+                to={`/nasheed/${nasheed.id}?artist=${nasheed.artist}`}
                 key={id}
-                className='link-no-underline'
+                className="link-no-underline"
               >
                 <div
                   onClick={() => setPath(location)}
                   key={id}
-                  className='nasheed'
+                  className="nasheed"
                 >
                   <img src={artistImg} alt={name} />
-                  <div className='text'>
+                  <div className="text">
                     <p>{name}</p>
                     <span>{artist}</span>
                   </div>
                 </div>
               </Link>
-            )
+            );
           })}
         </div>
       </section>
