@@ -298,11 +298,11 @@ footer p{
   width: 100%;
   max-width: 100%;
   height: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns:300px 300px 300px; /* Use auto-fit and minmax to create flexible grid columns */
+  grid-template-rows:fit-content; /* Use auto-fit and minmax to create flexible grid rows */
   overflow: auto;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   margin: 0px -1rem !important;
 }
@@ -1098,7 +1098,6 @@ audio {
   justify-content: center;
   justify-items: center;
   overflow: auto;
-  grid-row-gap: 10px;
 }
 
 .s-artist .nasheed{
