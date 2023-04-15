@@ -17,7 +17,7 @@ function Home() {
         </button>
       </div>
       <section className="s-songs">
-        <h1>Top Songs</h1>
+        <h1>Top Nasheeds</h1>
         <div className="songs-container">
           {nasheeds.map((nasheed) => {
             const { artist, id, img, name } = nasheed;

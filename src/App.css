@@ -274,7 +274,7 @@ footer p{
 
 .s-songs{
   position: absolute;
-  width: 1005px;
+  width: 1030px;
   height: 600px;
   z-index: 3;
   background: #f5f5f522;
@@ -310,7 +310,6 @@ footer p{
 
 .nasheed {
   display: flex;
-  margin: 10px;
   width: 100%; 
   height: fit-content;
   background: #f5f5f522;
@@ -323,12 +322,12 @@ footer p{
 .nasheed .text{
   display: flex;
   flex-direction: column;
-  margin: auto 15px;
+  margin: auto 10px;
   align-items: center;
 }
 
 .nasheed p{
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 1px;
   color:whitesmoke;
 }
@@ -338,10 +337,10 @@ footer p{
 }
 
 .nasheed span{
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 1px;
   margin-top:5px;
-  color:whitesmoke;
+  color:#111;
 }
 
 .nasheed img{
@@ -444,12 +443,11 @@ footer p{
   }
 
   .nasheed p{
-  font-size: 15px;
-  margin: auto 10px;
+  font-size: 12px;
   letter-spacing: 1px;
 }
   .nasheed span{
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .s-songs .songs-container::-webkit-scrollbar {
@@ -519,13 +517,14 @@ footer p{
   display: flex;
   flex-direction: column;
   align-items:center;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
   color:whitesmoke;
 }
 
 .single-nasheed .p-2{
-  font-size: 18px;
+  margin-top: 2px;
+  font-size: 16px;
 }
 
 audio {
@@ -579,6 +578,13 @@ audio {
   .single-nasheed{
     margin: auto;
   }
+  .p{
+  font-size: 17px;
+}
+
+.single-nasheed .p-2{
+  font-size: 15px;
+}
 }
 
 @media screen and (max-width: 505px) {
@@ -589,15 +595,11 @@ audio {
   }
 
   .p{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .single-nasheed .p-2{
-  font-size: 15px;
-}
-
-  .single-nasheed .p-2{
-  font-size: 18px;
+  font-size: 13px;
 }
 
 audio {
@@ -747,7 +749,7 @@ audio {
 
 @media screen and (max-width: 770px) {
   .home-icon button{
-    top: 9%;
+    top: 5%;
     left: 80%;
     font-size: 30px;
   }
@@ -847,17 +849,11 @@ audio {
 
 }
 
-.text span{
-  font-size: 16px;
-  letter-spacing: 1px;
-  color:whitesmoke;
-}
-
 /************ TOP ARTISTS **************/
 
 .s-top-artists{
   position: absolute;
-  width: 1005px;
+  width: 1040px;
   height: 600px;
   z-index: 3;
   background: #f5f5f522;
@@ -877,6 +873,13 @@ audio {
   align-items: start;
   overflow: auto;
   gap: .5rem 2rem;
+  justify-content: center;
+  margin: 0px -1rem !important;
+}
+
+.top-artists-container a{
+  height: fit-content;
+  width: fit-content;
 }
 
 .s-top-artists h1{
@@ -904,7 +907,7 @@ audio {
 
 
 .atist p{
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 1px;
   color:whitesmoke;
   margin-bottom: 5px;
@@ -919,6 +922,7 @@ audio {
 
 .link-no-underline {
   text-decoration: none; /* remove underline */
+  color:whitesmoke;
 }
 
 .atist img{
@@ -1030,11 +1034,12 @@ audio {
     grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
     justify-content: center;
     overflow-x:hidden;
+    margin: 0px -0.5rem !important;
   }
   
   .atist {
-    width: auto;
-    margin: 10px;
+    width: 85%;
+    margin:20px 0px 20px 20px;
   }
   .s-top-artists {
     width:90%;
@@ -1060,48 +1065,20 @@ audio {
   display: flex;
 }
 
-.artist-info{
-  text-align: center;
-  width: 40%;
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: center;
-}
-
-.artist-info img{
-  width: 300px;
-  height: 300px;
-  border-radius:50%;
-}
-
-.artist-info h1{
-  font-size: 35px;
-  margin: 10px;
-  color:whitesmoke;
-}
-
-.artist-info p{
-  font-size: 18px;
-  color:whitesmoke;
-  margin-bottom: 5px;
-}
-
 .artist-songs{
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: grid;
   align-items: start;
   justify-content: center;
   justify-items: center;
   overflow: auto;
+  margin:30px -1rem !important;
 }
 
 .s-artist .nasheed{
-  margin: 20px;
+  margin: 15px 10px;
   width: 380px;
   height: fit-content; 
   padding: 20px; 
@@ -1182,45 +1159,14 @@ audio {
 
 }
 
-@media (max-width: 910px) {
+@media (max-width: 930px) {
   .s-artist{
   position: fixed;
   top: 55%; /* Set top position to 50% */
   left: 50%; /* Set left position to 50% */
   transform: translate(-50%, -50%); /* Use transform to center horizontally and vertically */
-  display: flex;
   }
 }
-
-@media (max-width: 880px) {
-.s-artist{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  }
-
-  .artist-info{
-  margin: 5px 0 0 0;
-  align-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: column;
-  }
-
-  .artist-info img{
-  width: 180px;
-  height: 180px;
-}
-
-.artist-info h1{
-  font-size: 27px;
-  margin: 5px;
-}
-
-.artist-info p{
-  font-size: 16px;
-}
-}
-
 
 @media (max-width: 510px) {
 .s-artist{
@@ -1230,17 +1176,11 @@ audio {
 .s-artist .nasheed{
   width: 260px;
 }
-
-.artist-info img{
-  width: 180px;
-  height: 180px;
 }
 
-.artist-info h1{
-  font-size: 27px;
-}
-
-.artist-info p{
-  font-size: 16px;
-}
+@media (max-width: 350px) {
+  .artist-songs{
+    margin:30px -0.5rem !important;
+  }
+  
 }

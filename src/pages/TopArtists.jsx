@@ -31,7 +31,7 @@ function Categories() {
             const filteredNasheeds = nasheeds.filter(
               (nasheed) => nasheed.artist === sortedArtist
             );
-            const { img, id, artist } = filteredNasheeds[0]; // Assuming each category has at least one nasheed
+            const { artistImg, id, artist } = filteredNasheeds[0]; // Assuming each category has at least one nasheed
             const number = filteredNasheeds.length;
             return (
               <Link
@@ -40,7 +40,7 @@ function Categories() {
                 className="link-no-underline"
               >
                 <div key={id} className="atist">
-                  <img src={img} alt={artist} />
+                  <img src={artistImg} alt={artist} />
                   <div className="text">
                     <p>{artist}</p>
                     <span>{number} songs</span>

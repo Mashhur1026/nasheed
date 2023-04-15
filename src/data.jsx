@@ -11,18 +11,18 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "The Spirit of Bravery",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 2,
-    artist: "Myxamma Al Xusain",
+    artist: "Muhammad Al Muqit",
     category: "Sad",
     song: "https://res.cloudinary.com/dj4lkwyjd/video/upload/v1681389446/Sad_Arabic_Nasheeds_Collection_No_Music_Nasheeds_l1LYBnOwwrE_160_mp3cut.net_8_vaqqgo.m4a",
 
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "Nasheed Elaxi Anne",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "Sad nasheed 1",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "Tear After Tear",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "Sad nasheed 2",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "Death",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 7,
@@ -72,27 +72,27 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "The sins",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 8,
-    artist: "Anshad",
+    artist: "Axmed Buxatir",
     category: "Sad",
     song: "https://res.cloudinary.com/dj4lkwyjd/video/upload/v1681389444/Sad_Arabic_Nasheeds_Collection_No_Music_Nasheeds_l1LYBnOwwrE_160_mp3cut.net_6_haaogj.m4a",
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "Ya adheeman",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 9,
-    artist: "Anasheed",
+    artist: "Unknown",
     category: "Sad",
     song: "https://res.cloudinary.com/dj4lkwyjd/video/upload/v1681389444/Sad_Arabic_Nasheeds_Collection_No_Music_Nasheeds_l1LYBnOwwrE_160_mp3cut.net_3_nyj5yr.m4a",
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "To him a prisoner",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 10,
@@ -102,7 +102,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "Ya adheeman",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 11,
@@ -112,7 +112,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359216/sad_rsh1bv.jpg",
     name: "For you oh my lord",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 12,
@@ -122,17 +122,17 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Ilahana ma a'dalak",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 13,
-    artist: "Jabri",
+    artist: "Mohamed Mourad",
     category: "Relaxing",
     song: "https://res.cloudinary.com/dj4lkwyjd/video/upload/v1681389400/Relaxing_Nasheeds_Collection_No_Music_Nasheeds_mrWqvm7mLxI_160_1_mp3cut.net_2_kcycmy.mp3",
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Allah is my lord",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 14,
@@ -142,7 +142,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Powerful nasheed",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 15,
@@ -152,7 +152,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Relax nasheed 1",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 16,
@@ -162,7 +162,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "We rise to the sky",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 17,
@@ -172,7 +172,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Asma' Allah Alhosna",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 18,
@@ -182,7 +182,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "O nightingale of branches",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 19,
@@ -192,7 +192,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Relax nasheed 2",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 20,
@@ -202,7 +202,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Whan I laugh",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 21,
@@ -212,7 +212,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Thanks to you Allah",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 22,
@@ -222,7 +222,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Bitheker Allah",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 23,
@@ -232,7 +232,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Taweel al shawq",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 24,
@@ -242,7 +242,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Hukum akad istishna bolehkah",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 25,
@@ -252,7 +252,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Relax nasheed 3",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 26,
@@ -262,7 +262,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Nibras al nour",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
   {
     id: 27,
@@ -272,7 +272,7 @@ const nasheeds = [
     img: "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681359203/relax_mi5kp1.jpg",
     name: "Waqafat",
     artistImg:
-      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681362362/Siedd_mk6bwh.jpg",
+      "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681540337/singer_gg2ywo.jpg",
   },
 ];
 

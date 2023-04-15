@@ -15,40 +15,22 @@ function Artist() {
     return <div>Artist not found</div>
   }
 
-  const selector = () => {
-    let img = ''
-    let artistName = ''
-    selectedArtists.forEach((item) => {
-      const { artistImg, artist } = item
-      img = artistImg
-      artistName = artist
-    })
-    return { img, artistName }
-  }
-
-  const { img, artistName } = selector()
-
   return (
     <>
-      <div className='hamburger'>
+      <div className="hamburger">
         <button onClick={openSidebar}>
           <RxHamburgerMenu />
         </button>
       </div>
-      <section className='s-artist'>
-        <div key={1} className='artist-info'>
-          <img src={img} alt={artistName} />
-          <h1>{artistName}</h1>
-          <p>{selectedArtists.length} songs</p>
-        </div>
-        <div className='artist-songs'>
+      <section className="s-artist">
+        <div className="artist-songs">
           {selectedArtists.map((nasheed) => {
-            const { artistImg, name, id, artist } = nasheed
+            const { artistImg, name, id, artist } = nasheed;
             return (
               <Link
                 to={`/nasheed/${nasheed.id}?artist=${nasheed.artist}`}
                 key={id}
-                className="link-no-underline"
+                className="link-no-underline "
               >
                 <div
                   onClick={() => setPath(location)}
@@ -67,7 +49,7 @@ function Artist() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
 export default Artist
