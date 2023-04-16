@@ -279,7 +279,7 @@ const nasheeds = [
 export default nasheeds
 
 export const logo =
-  'https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681117209/logo_vl92uv.png'
+  "https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681627282/logonew_n645fz.png";
 
 export const icons = [
   {

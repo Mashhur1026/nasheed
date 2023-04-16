@@ -33,9 +33,12 @@ font-family: 'Inter', sans-serif;
 }
 
 html{
-background: #000428;
+/* background: #000428;
 background: -webkit-linear-gradient(to left, #004e92, #000428); 
-background: linear-gradient(to left, #004e92, #000428);
+background: linear-gradient(to left, #004e92, #000428); */
+background-image: url(https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681629275/Untitled_5_-1_vto9eu.png);
+background-position: center;
+background-size: cover;
 }
 
 #root{
@@ -125,7 +128,7 @@ display: none;
 }
 
 .logo img{
-  width: 120px;
+  width: 160px;
 }
 
 .links li{
@@ -258,7 +261,7 @@ aside{
 }
 
 .logo img{
-  width: 100px;
+  width: 130px;
 }
 
 footer p{
@@ -747,10 +750,20 @@ audio {
   font-size: 40px;
 }
 
+  .h3{
+    color:whitesmoke;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
 @media screen and (max-width: 770px) {
   .home-icon button{
     top: 5%;
-    left: 80%;
+    left: 90%;
     font-size: 30px;
   }
 }
@@ -827,7 +840,11 @@ audio {
     grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
     justify-content: center;
   }
-
+    .home-icon button{
+    top: 8%;
+    left: 85%;
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -1166,6 +1183,10 @@ audio {
   left: 50%; /* Set left position to 50% */
   transform: translate(-50%, -50%); /* Use transform to center horizontally and vertically */
   }
+  
+  .s-songs .search-text{
+    font-size: 1.3rem !important;
+  }
 }
 
 @media (max-width: 510px) {
@@ -1183,4 +1204,19 @@ audio {
     margin:30px -0.5rem !important;
   }
   
+}
+
+
+
+.error-div{
+  position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.error-div h1{
+  color:whitesmoke;
+  font-size: 45px;
 }

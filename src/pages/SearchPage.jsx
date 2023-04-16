@@ -40,10 +40,10 @@ function SearchPage() {
             </button>
           </div>
         </Link>
-        <h1>Search results for "{text}"</h1>
+        <h1 className="search-text">Search results for "{text}"</h1>
         <div className="songs-container single-grid">
           {!data.length ? (
-            <h3>We do not have such a nasheed</h3>
+            <h3 className="h3">We do not have such a nasheed</h3>
           ) : (
             data.map((nasheed) => {
               const { artist, id, img, name } = nasheed;
