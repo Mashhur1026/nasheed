@@ -34,7 +34,7 @@ function SearchPage() {
       </div>
       <section className="s-songs">
         <Link to={"/"}>
-          <div className="home-icon">
+          <div className="home-icon-search">
             <button>
               <AiOutlineHome />
             </button>

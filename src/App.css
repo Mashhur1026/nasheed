@@ -33,12 +33,12 @@ font-family: 'Inter', sans-serif;
 }
 
 html{
-/* background: #000428;
+background: #000428;
 background: -webkit-linear-gradient(to left, #004e92, #000428); 
-background: linear-gradient(to left, #004e92, #000428); */
-background-image: url(https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681629275/Untitled_5_-1_vto9eu.png);
+background: linear-gradient(to left, #004e92, #000428);
+/* background-image: url(https://res.cloudinary.com/dj4lkwyjd/image/upload/v1681629275/Untitled_5_-1_vto9eu.png);
 background-position: center;
-background-size: cover;
+background-size: cover; */
 }
 
 #root{
@@ -674,6 +674,8 @@ audio {
   align-items: start;
   overflow: auto;
   gap: .5rem 2rem;
+  justify-content: center;
+  margin: 0px -1rem !important;
 }
 
 .s-categories h1{
@@ -750,6 +752,16 @@ audio {
   font-size: 40px;
 }
 
+.home-icon-search button{
+  position:absolute;
+  top: 3%;
+  left: 90%;
+  background-color:transparent;
+  border:none;
+  color:whitesmoke;
+  font-size: 40px;
+}
+
   .h3{
     color:whitesmoke;
     position: absolute;
@@ -762,7 +774,12 @@ audio {
 
 @media screen and (max-width: 770px) {
   .home-icon button{
-    top: 5%;
+    top: 3%;
+    left: 90%;
+    font-size: 30px;
+  }
+  .home-icon-search button{
+    top: 8%;
     left: 90%;
     font-size: 30px;
   }
@@ -841,6 +858,11 @@ audio {
     justify-content: center;
   }
     .home-icon button{
+    top: 3%;
+    left: 85%;
+    font-size: 30px;
+  }
+  .home-icon-search button{
     top: 8%;
     left: 85%;
     font-size: 30px;
@@ -854,11 +876,12 @@ audio {
     grid-template-rows:auto; /* Use auto-fit and minmax to create flexible grid rows */
     justify-content: center;
     overflow-x:hidden;
+    margin: 0px -0.5rem !important;
   }
   
   .category {
-    width: auto;
-    margin: 10px;
+    width: 85%;
+    margin: 20px;
   }
   .s-categories {
     width:90%;
